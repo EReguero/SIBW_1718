@@ -14,21 +14,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="obra.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="obra.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/obra.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="93" column="127" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="93" selection-end-column="127" />
+            <state relative-caret-position="346">
+              <caret line="138" column="12" lean-forward="false" selection-start-line="138" selection-start-column="12" selection-end-line="138" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="obra_imprimir.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="obra_imprimir.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/obra_imprimir.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+            <state relative-caret-position="-238">
+              <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -49,8 +49,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/obra.html" />
         <option value="$PROJECT_DIR$/obra_imprimir.html" />
+        <option value="$PROJECT_DIR$/obra.html" />
       </list>
     </option>
   </component>
@@ -132,12 +132,12 @@
       <option name="presentableId" value="Default" />
       <updated>1520365989163</updated>
       <workItem from="1520365999913" duration="10020000" />
-      <workItem from="1520520161094" duration="2475000" />
+      <workItem from="1520520161094" duration="2904000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12495000" />
+    <option name="totallyTimeSpent" value="12924000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -181,18 +181,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/obra.html">
+    <entry file="file://$PROJECT_DIR$/obra_imprimir.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="93" column="127" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="93" selection-end-column="127" />
+        <state relative-caret-position="-238">
+          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/obra_imprimir.html">
+    <entry file="file://$PROJECT_DIR$/obra.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        <state relative-caret-position="346">
+          <caret line="138" column="12" lean-forward="false" selection-start-line="138" selection-start-column="12" selection-end-line="138" selection-end-column="12" />
           <folding />
         </state>
       </provider>
