@@ -98,10 +98,17 @@ li a:hover {
 }
 /* Style the footer */
 .footer {
-    background-color: #f1f1f1;
+    background-color: #333;
     padding: 10px;
     text-align: center;
+    text-decoration-color: white;
 }
+
+ #bottonessociales img {
+            float: right;
+            width: 30px;
+            height: 30px;
+        }
 
 
 #imagesindex {
