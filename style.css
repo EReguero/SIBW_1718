@@ -101,14 +101,15 @@ li a:hover {
     background-color: #333;
     padding: 10px;
     text-align: center;
-    text-decoration-color: white;
+    color: white;
+    margin-top: 25px;   
 }
 
- #bottonessociales img {
-            float: right;
-            width: 30px;
-            height: 30px;
-        }
+#bottonessociales img {
+    float: right;
+    width: 30px;
+    height: 30px;
+}
 
 
 #imagesindex {
