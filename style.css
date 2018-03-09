@@ -8,7 +8,7 @@ body {
 
 /* Style the header */
 .header {
-    background-color: #f1f1f1;
+    background-color: #00000;
     padding: 20px;
     text-align: center;
 }
@@ -21,31 +21,34 @@ ul {
     background-color: #333;
 }
 
+
 li {
     float: left;
-    right: 50%;
+    width: 25%;
 }
 
 li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 18px 16px;
     text-decoration: none;
 }
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: #111;
+    background-color: #4caf50;
 }
+
 
 
 #logo{
     float:left;
     width:80px;
-    height:80px;"
+    height:80px;
     /* This is a single-line comment */
 }
+
 /* Create three unequal columns that floats next to each other */
 .column {
     float: left;
@@ -128,3 +131,15 @@ li a:hover {
     height: 180px;
 
 }
+
+.menu{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
