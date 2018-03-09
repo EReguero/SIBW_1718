@@ -83,6 +83,11 @@ li a:hover {
 .testoprincipal{
     color: black;
 }
+ #bottonessociales_encorpo img {
+     float: right;
+     width: 30px;
+     height: 30px;
+ }
 
 /* Clear floats after the columns */
 .row:after {
@@ -106,10 +111,10 @@ li a:hover {
 }
 
 #bottonessociales img {
-    float: right;
-    width: 30px;
-    height: 30px;
-}
+     float: left;
+     width: 30px;
+     height: 30px;
+ }
 
 
 #imagesindex {
