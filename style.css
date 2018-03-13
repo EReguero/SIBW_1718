@@ -70,11 +70,12 @@ li a:hover {
 #imagescontainer {
     float:right;
     margin-bottom: 10px;
+
 }
 .container img{
     clear:right ;
-    width: 180px;
-    height: 180px;"
+    width: 400px;
+    height: 300px;"
 }
 .clearfix {
     clear:right;
