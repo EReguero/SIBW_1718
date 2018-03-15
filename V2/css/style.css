@@ -118,8 +118,10 @@ li ul li{
 
 #main #aux p{
     padding-right: 10px;
-    padding-top: 50px;
+    padding-top: 65px;
     color: white;
+    font-weight: bold;
+    font-size: 12px;
 
 }  
 
