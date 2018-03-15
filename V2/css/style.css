@@ -6,6 +6,7 @@ body{
     background-image: url("../img/background.png");
     background-repeat: round;
     border-color: #333;
+    font-family: verdana;   
 }
 
 /************************************/
@@ -39,7 +40,7 @@ body{
 }
 
 
-ul {
+ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -62,9 +63,27 @@ li a {
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+li:hover {
     background-color: #4caf50;
 }
+
+
+li ul {
+    display:none;
+    position:absolute;
+    width:243px;
+}
+            
+li:hover ul {    
+    display:block;
+}
+
+li ul li{
+    position: relative;
+    float: none;
+    width: auto;
+}
+
 
 /************************************/
 /* ----------- CUERPO -------------*/
@@ -72,68 +91,113 @@ li a:hover {
 
  #main {
     display: table;
-    background-color: white;
+    background-color:#F1F1EF;
     font-size: 14px;
     width: 98%;
     border-left: solid 10px;
     border-right: solid 10px;
     border-color: #333;
+    padding-bottom: 15px;
+
 }
 
 #main #aux {
-    width: 35%;
+    width: 25%;
     float: left;
     clear: both;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
+   
+
+#main #aux a{
     
-#main #aux #aux_wiki {
-    width: 90%;
-    background-color: #C3BEBD;
-    text-align: left ;
-    padding-left: 15px;
+    text-decoration: none;
+    text-align: right; 
+}
+
+#main #aux p{
+    padding-right: 10px;
+    padding-top: 50px;
+    color: white;
+
+}  
+
+
+#main #aux #fundacion{
+
     height: 100px;
+    width: 80%;
+    background-color: black;
+}
+
+#main #aux #NY{
+    height: 100px;
+    width: 80%;
+    background-color: #2980B9;
+}
+
+#main #aux #venecia{
+    height: 100px;
+    width: 80%;
+    background-color:#E67E22;
+}
+
+#main #aux #wiki{
+    height: 100px;
+    width: 80%;
+    background-color: #B03A2E;
 }
 
 #main #obras{
-    width: 65%;
+    width: 75%;
     float: left;
     padding-top: 40px;
     padding-bottom: 20px;
 }
 
 #main #obras img{
-    height: 200px;
-    width: 180px;
-}
-
-#main #obras img:hover{ 
-    -webkit-transform: scale(1.9);
-    transform: scale(1.9)
-
+    height: 240px;
+    width: 220px;
+    margin-right: 9px;
+    margin-top: 15px;
+    border: solid 3px #C5C5B5;
 }
 
 
 
-
 /************************************/
-/* ----------- CUERPO -------------*/
+/* ----------- Footer -------------*/
 /************************************/
 
-#footer {
+footer {
     background-color: #333;
-    text-align: center;
     color: white;  
     padding: 10px;
     width: 98%;
+    font-size: 14px;
 }
+
+footer #contacto p{
+    padding-left: 19px;
+    font-size: 12px;
+}
+
+footer #contacto h1{
+    font-size: 16px;
+    margin-left: 15px;
+    border-bottom: 2px solid white;
+    width: 30%;
+    padding-bottom: 5px;
+}
+
 
 footer #copyright{
     text-align: center;
-    font-size: 12px;
     color: white ;
+    font-size: 10px;
+    padding-top: 5px;
 }
-
-
 
 
 /*****************************************************************************/
@@ -143,15 +207,72 @@ footer #copyright{
 /*****************************************************************************/
 
 
-#bottonessociales img {
-     float: left;
-     width: 30px;
-     height: 30px;
+
+#main #aux #biografia{
+
+    height: 100px;
+    width: 80%;
+    background-color: #A4D6F0;
+    border-left: solid 8px #2196F3;
 }
 
 
-#obras #bottonessociales_encorpo img {
-     float: right;
-     width: 30px;
-     height: 30px;
+#main #aux #web{
+    height: 100px;
+    width: 80%;
+    background-color: #D2EE95;
+    border-left: solid 8px #A9F10A;
+}
+
+
+#main #aux #biografia p{
+    color: black;
+}
+
+#main #aux #web p{
+    color: black;
+}
+#main #descripcion {
+    width: 75%;
+    float: left;
+    padding-top: 40px;
+    padding-bottom: 5px;
+}
+
+#main #descripcion h2{
+    border-bottom: solid 2px black;
+    width: 55%;
+}
+
+#main #descripcion h3{
+    margin-top: -8px;
+}
+#main #descripcion h4{
+    margin-top: -13px;
+    margin-bottom: 25px;
+}
+
+#main #descripcion #foto{
+    height: 280px;
+    width: 280px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    float: right;
+}
+
+#main #descripcion #foto:hover{ 
+    -webkit-transform: scale(1.9);
+    transform: scale(1.9)
+}
+
+#botonessociales {
+    padding-right: 10px;
+}
+
+#botonessociales img{
+    float: right;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
 }
