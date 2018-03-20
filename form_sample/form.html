@@ -62,21 +62,21 @@
 //Listado de palabras prohibidas
         var prohibidas = ["mala", "pa^la^bra^2", "etc"];
 
-//Generar el regex
-        function escaparRegex(string) {
-            return string.replace(/[\\^$.|?*+()[{]/g, '\\$&');
-        }
 
         var prohibidasOr = prohibidas.map(escaparRegex).join('|'),
             regex = new RegExp('\\[?\\b(?:' + prohibidasOr + ')\\b\\]?', 'gi');
 
 
-//Reemplazar
-        resultado = texto.replace(regex, '');
+    //Reemplazar
+        resultado = texto.replace(regex, '*');
 
-//Mostrar el resultado
+    //Mostrar el resultado
         console.log(resultado); // => Elimina  o  de una frase, pero no de , ni por , dejando malaria
         return resultado;
+    }
+    //Generar el regex
+    function escaparRegex(string) {
+        return string.replace(/[\\^$.|?*+()[{]/g, '\\$&');
     }
 </script>
 
