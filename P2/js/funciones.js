@@ -15,7 +15,14 @@ function mostrarComentarios(){
 function validarEmail() {
     
     var email = document.getElementById("email").value;
+
+    //validacion de email
     if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(email)){
+        //save element entrada_texto in variable resultado
+        var resultado = document.getElementById("entrada_texto");
+        //change the value of resultado(associated a entra_texto) con el texto sin palabras prohibidas
+        resultado.value=validarTexto();
+        //crea el comentario con texto sin palabras prohibidas
         crearComentario();
     } else {
         alert("¡La dirección de email es incorrecta!");
@@ -29,6 +36,10 @@ function validarTexto() {
 		var texto = document.getElementById("entrada_texto").value;
         var prohibidas = ["mala", "pa^la^bra^2", "etc"];
 
+        //Generar el regex
+        function escaparRegex(string) {
+            return string.replace(/[\\^$.|?*+()[{]/g, '\\$&');
+        }
 
         var prohibidasOr = prohibidas.map(escaparRegex).join('|'),
             regex = new RegExp('\\[?\\b(?:' + prohibidasOr + ')\\b\\]?', 'gi');
@@ -43,10 +54,6 @@ function validarTexto() {
  }
 
 
- //Generar el regex
-function escaparRegex(string) {
-    return string.replace(/[\\^$.|?*+()[{]/g, '\\$&');
-}
 
 function crearComentario() {
   
