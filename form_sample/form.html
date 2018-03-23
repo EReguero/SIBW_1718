@@ -49,6 +49,8 @@
         document.getElementById("ptext").innerHTML = comment[1];
         document.getElementById("pemail").innerHTML =  comment[2];
     }
+
+
     function validarEmail(valor) {
         if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(valor)){
             alert("La dirección de email " + valor + " es correcta!.");
@@ -56,10 +58,12 @@
             alert("La dirección de email es incorrecta!.");
         }
     }
+
+
     function validarTexto(texto) {
 
 
-//Listado de palabras prohibidas
+    //Listado de palabras prohibidas
         var prohibidas = ["mala", "pa^la^bra^2", "etc"];
 
 
