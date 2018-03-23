@@ -14,9 +14,13 @@ body{
 #logo{
     float:right;
     margin: 20px;
-    width: 35%;
+    width: 25%;
 }
 
+#logo img{
+    width: 110px;
+    height: 10  0px;
+}
 /* Propiedades del texto para imprimir */
 #texto_imprimir{
     margin-left: auto;

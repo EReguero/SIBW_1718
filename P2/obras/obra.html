@@ -12,11 +12,14 @@
         <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
         <!-- Estilo css de la pagina -->
         <link rel="stylesheet" type="text/css" href="../css/style.css"/> 
+        <!-- Linkeado Javascript-->
+        <script src="../js/funciones.js"></script>
     </head>
     <body>
         <!-- Header con el logo e imagen de fondo -->
         <header id="logo">
                <img src="../img/logo.jpg" alt="logo">
+               <h1>Guggenheim Bilbao</h1>
         </header>
         <!-- Menu Horizontal-->
         <nav id="menu">
@@ -58,12 +61,30 @@
                 <div id="foto">
                     <img src="../img/sauracabezas1.jpg" alt="24 Cabezas">
                     <p>24 Cabezas</p>
+                    <p id="fuente">Fuente: Guggenheim Bilbao</p>
                 </div>
                 <p>Las obras en papel constituyen una parte importante del trabajo de Saura. Fue pertinaz dibujante durante toda su carrera y empleaba el dibujo para explorar todas las variaciones y transformaciones de sus múltiples temas. 24 Cabezas (1957) pertenece al tema "Multitudes", en la que trabajó el artista desde finales de la década de 1950 hasta los últimos años de su vida. En estas obras, los rostros sin cuerpo entrelazados ocupan la mayor parte o toda la superficie del lienzo o el papel, creando una composición amplia e integral. 24 Cabezas destaca por ser una colección más flexible de figuras garabateadas. Las cabezas de tono terroso, definidas por estallidos estenográficos, sin ilusión alguna de profundidad, se articulan por líneas de luz blanca o sombra. Esta obra también presenta un elemento de collage, ya que las piezas de cartón ondulado están pegadas con cola al papel, lo que aporta calidad táctil a algunos de los rostros.</p>
             </article>  
             <!-- Botones para compartir-->
-             <div id="botonessociales">
-
+            <button id="boton_comentarios" onclick="mostrarComentarios()">Comentarios</button>
+            <div id ="box_comentarios">
+                <div id="comentarios">
+    	            	<div class="comentario">
+                            <p class="nombre">Emilio Reguero Castro</p>
+                            <p class="fecha">25-05-10</p>
+                            <p class="text">Hiiiiiiiiiiiiiiiiii</p>
+                        </div>
+                </div>
+                <div id="comentar">
+                    <label for="entrada_nombre">Nombre:  </label>
+                    <input type="text" name="entrada_nombre" id="entrada_nombre" placeholder="Nombre completo">
+                    <label for="email">Email:  </label>
+                    <input type="text" name="email" id="email" placeholder="example@email.es"> 
+                    <textarea name="entrada_texto" id="entrada_texto" placeholder="Introduzca aquí su comentario." onchange="validarTexto()"></textarea>
+                    <button id="crear_comentario" onclick="validarEmail()">Enviar</button>
+                </div>
+            </div>
+            <div id="botonessociales">
                 <!-- Botón de pagina para imprimir -->
                 <a href="obra_imprimir.html">
                     <img src="../img/print_button.jpg" alt="Boton imprimir">
