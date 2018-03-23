@@ -33,22 +33,29 @@
 
 
 <script>
-    function myFunction() {
-        var comment = {firstName:"", texto:"", email:""}, resultado;
+function myFunction() {
+    var comment = {firstName:"", texto:"", email:""}, resultado;
 
-        comment[0] = document.getElementById("name").value;
+    comment[0] = document.getElementById("name").value;
 
-        comment[1] = document.getElementById("text").value;
+    comment[1] = document.getElementById("text").value;
 
-        comment[2] = document.getElementById("email").value;
+    comment[2] = document.getElementById("email").value;
 
-        validarEmail(comment[2]);
-        comment[1]=validarTexto(comment[1]);
+    validarEmail(comment[2]);
+    comment[1]=validarTexto(comment[1]);
 
-        document.getElementById("pname").innerHTML =  comment[0];
-        document.getElementById("ptext").innerHTML = comment[1];
-        document.getElementById("pemail").innerHTML =  comment[2];
+    document.getElementById("pname").innerHTML =  comment[0];
+    document.getElementById("ptext").innerHTML = comment[1];
+    document.getElementById("pemail").innerHTML =  comment[2];
+}
+function validarEmail(valor) {
+    if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(valor)){
+        alert("La dirección de email " + valor + " es correcta!.");
+    } else {
+        alert("La dirección de email es incorrecta!.");
     }
+<<<<<<< HEAD
 
 
     function validarEmail(valor) {
@@ -61,6 +68,12 @@
 
 
     function validarTexto(texto) {
+=======
+}
+
+
+function validarTexto(texto) {
+>>>>>>> 1fb8654d1c76e6555fa31b82edfe1586db287f64
 
 
     //Listado de palabras prohibidas
