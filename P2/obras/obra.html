@@ -80,7 +80,7 @@
                     <input type="text" name="entrada_nombre" id="entrada_nombre" placeholder="Nombre completo">
                     <label for="email">Email:  </label>
                     <input type="text" name="email" id="email" placeholder="example@email.es"> 
-                    <textarea name="entrada_texto" id="entrada_texto" placeholder="Introduzca aquí su comentario." onchange="validarTexto()"></textarea>
+                    <textarea name="entrada_texto" id="entrada_texto" placeholder="Introduzca aquí su comentario." onkeyup="validarTexto()"></textarea>
                     <button id="crear_comentario" onclick="validarEmail()">Enviar</button>
                 </div>
             </div>

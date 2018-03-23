@@ -18,10 +18,6 @@ function validarEmail() {
 
     //validacion de email
     if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(email)){
-        //save element entrada_texto in variable resultado
-        var resultado = document.getElementById("entrada_texto");
-        //change the value of resultado(associated a entra_texto) con el texto sin palabras prohibidas
-        resultado.value=validarTexto();
         //crea el comentario con texto sin palabras prohibidas
         crearComentario();
     } else {
@@ -32,7 +28,7 @@ function validarEmail() {
 
 function validarTexto() {
 //Listado de palabras prohibidas
-
+	if (event.keyCode == 32){
 		var texto = document.getElementById("entrada_texto").value;
         var prohibidas = ["mala", "pa^la^bra^2", "etc"];
 
@@ -42,16 +38,17 @@ function validarTexto() {
         }
 
         var prohibidasOr = prohibidas.map(escaparRegex).join('|'),
-            regex = new RegExp('\\[?\\b(?:' + prohibidasOr + ')\\b\\]?', 'gi');
+        regex = new RegExp('\\[?\\b(?:' + prohibidasOr + ')\\b\\]?', 'gi');
 
+    	//Reemplazar
 
-    //Reemplazar
-        resultado = texto.replace(regex, '*');
+    	var x = '*';
+    	
+        resultado = texto.replace(regex, x);
 
-    //Mostrar el resultado
-        console.log(resultado); // => Elimina  o  de una frase, pero no de , ni por , dejando malaria
-        return resultado;
- }
+        document.getElementById("entrada_texto").value = resultado;
+    }
+}
 
 
 
