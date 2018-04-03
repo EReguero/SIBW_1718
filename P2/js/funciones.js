@@ -1,16 +1,3 @@
-function mostrarComentarios(){
-	var x = document.getElementById("box_comentarios");
-	var b = document.getElementById("boton_comentarios")
-    if (x.style.display === "none") {
-        x.style.display = "block";
-        b.style.backgroundColor =" #4caf50";
-
-
-    } else {
-        x.style.display = "none";
-        b.style.backgroundColor ="#333";
-    }
-}
 
 function validarEmail() {
     
@@ -33,11 +20,28 @@ function validarEmail() {
 }
 
 
+function mostrarComentarios(){
+	var x = document.getElementById("box_comentarios");
+	var b = document.getElementById("boton_comentarios")
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        b.style.backgroundColor =" #4caf50";
+
+
+    } else {
+        x.style.display = "none";
+        b.style.backgroundColor ="#333";
+    }
+}
+
+
+
+
 function validarTexto() {
 //Listado de palabras prohibidas
 	if (event.keyCode == 32){
 		var texto = document.getElementById("entrada_texto").value;
-        var prohibidas = ["mierda", "basura", "puta", "gilipollas", "cabron", "tonto", "idiota", "caca", "holi", "tontos" ];
+        var prohibidas = ["mierda", "basura", "gilipollas", "cabron", "tonto", "idiota", "caca", "tontos" ];
 
         //Generar el regex
         function escaparRegex(string) {
