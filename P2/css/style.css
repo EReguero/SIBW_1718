@@ -83,7 +83,7 @@
     }
 
     /* Muestra el menu oculto al pasar el ratón por encima */            
-    li:hover ul {    
+    ul li:hover ul {    
         display:block;
     }
 
