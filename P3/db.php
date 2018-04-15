@@ -41,5 +41,4 @@ function getLastID(){
     $conn->close();
 }
 
-
 ?>

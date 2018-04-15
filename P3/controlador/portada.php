@@ -47,6 +47,11 @@
                 	<a href="?obra=3"><img src="img/Antropometriaazul.jpg" alt="Antropometria Azul"></a>
                 	<p>Antropometria Azul</p>
             	</div>
+            	<!-- Ensayo de desocupación de la esfera -->
+                	            <div class="contenedor_obra">
+                	            	<a href="?obra=5"><img src="img/Ensayo.jpg" alt="Ensayo de desocupación de la esfera"></a>
+                	            	<p>Ensayo de desocupación de la esfera</p>
+                </div>
             </div>   
         </div>
         <?php
