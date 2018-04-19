@@ -1,25 +1,29 @@
 <?php
- class DB_Helper{  
-
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "practica3";
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    $sql = "SELECT * FROM obras WHERE ID= ".$obraID;
-    $result = $conn->query($sql);
-    $row = $result->fetch_array();
+class db{  
     
-    return $row;
+    function conexion(){
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "practica3";
 
-    $conn->close();
 
+        // Create connection
+        global $conn;
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        mysqli_set_charset($conn,"utf8");
+        
+        // Check connection
+        if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+        }
+       
+        return $conn;
+    }
+  
+    public static function close_conexion($conn){
+        $conn->close();
+    }
 }
 
 ?>

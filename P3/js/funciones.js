@@ -26,8 +26,6 @@ function mostrarComentarios(){
     if (x.style.display === "none") {
         x.style.display = "block";
         b.style.backgroundColor =" #4caf50";
-
-
     } else {
         x.style.display = "none";
         b.style.backgroundColor ="#333";

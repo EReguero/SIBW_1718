@@ -1,8 +1,8 @@
 <?php
+  require("db_helper.php");
   if(count($_GET) == 0) {
-    include './controlador/portada.php';
+    include 'views/portada.php';
   } else {
-  $obraID = $_GET["obra"];
-    include("controlador/plantillaObra.php");
+    include("controladores/obra.php");
   }
 ;?>

@@ -1,29 +1,30 @@
 <?php
-    include 'getip.php';
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "practica3";
-    //echo $fecha_comento  = date("F j, Y, g:i a");
-    //echo $_POST["entrada_nombre"];
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+    include "db_helper.php";
+    function getip(){
+            if (getenv("HTTP_CLIENT_IP") && strcasecmp(getenv("HTTP_CLIENT_IP"), "unknown"))
+                $ip = getenv("HTTP_CLIENT_IP");
+            else if (getenv("HTTP_X_FORWARDED_FOR") && strcasecmp(getenv("HTTP_X_FORWARDED_FOR"), "unknown"))
+                $ip = getenv("HTTP_X_FORWARDED_FOR");
+            else if (getenv("REMOTE_ADDR") && strcasecmp(getenv("REMOTE_ADDR"), "unknown"))
+                $ip = getenv("REMOTE_ADDR");
+            else if (isset($_SERVER['REMOTE_ADDR']) && $_SERVER['REMOTE_ADDR'] && strcasecmp($_SERVER['REMOTE_ADDR'], "unknown"))
+                $ip = $_SERVER['REMOTE_ADDR'];
+            else
+                $ip = "unknown";
+            return($ip);
     }
 
-    // Get the client ip address
+
+    $bd=db::conexion();
     $ip = getip();
+    $sql = "INSERT INTO comentario (correo, obra_id, nome, ip, comment_text)
+    VALUES ('$_POST[email]','$_POST[obra]','$_POST[entrada_nombre]','$ip' ,'$_POST[entrada_texto]')";
 
-    $sql = "INSERT INTO comentario (correo, nome, ip, text)
-    VALUES ('$_POST[email]','$_POST[entrada_nombre]','$ip' ,'$_POST[entrada_texto]')";
+   if ($bd->query($sql) === TRUE) {
+      echo "<script type='text/javascript'>alert('Mensaje enviado correctamente');window.location.href='/?obra=".$_POST['obra']."';</script>";
+    } else {
+       echo "Error: " . $sql . "<br>" . $bd->error;
+    }
+    
 
-   if ($conn->query($sql) === TRUE) {
-       echo "New record created successfully";
-   } else {
-       echo "Error: " . $sql . "<br>" . $conn->error;
-   }
-    $conn->close();
 ?>
