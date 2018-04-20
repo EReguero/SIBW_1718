@@ -1,9 +1,9 @@
 <?php
 //Llamada al modelo
-	require_once("portada_model.php");
-	$obra=new obra_model();
+	require_once("models/portada_model.php");
+	$portada=new portada_model();
 	$datos = array();
-	$datos=$obra->get_datos();
+	$datos=$portada->get_datos();
 	//Llamada a la vista
-	require_once("views/plantillaObra.php");
+	require_once("views/plantillaPortada.php");
 ?>

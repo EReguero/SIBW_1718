@@ -12,9 +12,9 @@ class obra_model{
     public function get_datos(){
         $sql = "SELECT * FROM obras WHERE ID= ".$this->obra_id;
         $result = $this->bd->query($sql);
-        $obras = $result->fetch_array();
+        $row = $result->fetch_assoc();
 
-        return $obras;
+        return $row;
     }
 
     public function get_comentarios (){
@@ -22,6 +22,14 @@ class obra_model{
         $result = $this->bd->query($sql);
 
         return $result;
+    }
+
+    public function get_palabrasprohibidas (){
+        $sql = "SELECT palabra FROM palabrasprohibidas";
+        $result = $this->bd->query($sql);
+        $palabrasprohibidas = $result -> fetch_array();
+
+        return $palabrasprohibidas;
     }
 }
 ?>

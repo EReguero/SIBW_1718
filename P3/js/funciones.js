@@ -35,11 +35,11 @@ function mostrarComentarios(){
 
 
 
-function validarTexto() {
+function validarTexto(a) {
 //Listado de palabras prohibidas
 	if (event.keyCode == 32){
 		var texto = document.getElementById("entrada_texto").value;
-        var prohibidas = ["mierda", "basura", "gilipollas", "cabron", "tonto", "idiota", "caca", "tontos" ];
+        var prohibidas = a;
 
         //Generar el regex
         function escaparRegex(string) {
@@ -60,48 +60,16 @@ function validarTexto() {
 }
 
 
+//Variable que almacena el método window.open()
+var miVentana;
 
-function crearComentario() {
-  
-  //Cogemos el texto y nombre del formulario
-  var texto_in = document.getElementById("entrada_texto").value;
-  var nombre_in = document.getElementById("entrada_nombre").value;
-
-  //El divPrincipal es comentarios que es donde se contienen el comentario
-  var divPrincipal= document.getElementById('comentarios') ;
-  //Creamos un nuevo div
-  var newDiv = document.createElement("div");
-
-  //Creamos un nuevo p para elnombre
-  var paraN = document.createElement("p");
-  //Asignamos la classe nombre a ese p
-  paraN.className="nombre";
-  //creamos texto dentro de p con el nombre
-  var nombre = document.createTextNode(nombre_in);
-  //insertamos el texto en p
-  paraN.appendChild(nombre);
-
-
-  var paraD = document.createElement("p");
-  paraD.className="fecha";
-  var fecha = new Date();
-  var options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minutes: 'numeric'};
-  fecha.toLocaleDateString("es-ES", options);
-  var date = document.createTextNode(fecha);
-  paraD.appendChild(date);
-
-
-  var paraT = document.createElement("p");
-  paraT.className ="text";
-  var texto = document.createTextNode(texto_in);
-  paraT.appendChild(texto);
-
-  newDiv.appendChild(paraN);
-  newDiv.appendChild(paraD);
-  newDiv.appendChild(paraT);
-
-  newDiv.className ="comentario";
-
-  divPrincipal.appendChild(newDiv);
+//La función window_open crea el pop-up o ventana emergente
+function window_open(titulo,imagen,red){
+ miVentana = window.open("recursos/redes.php?titulo="+titulo+"&imagen="+imagen+"&red="+red, "Compartir en ", "width=750,height=500, top=85,left=120");
 }
-
+  
+//La función window_close cerrara el pop-up o ventana emergente
+function window_close(){
+  miVentana.close();
+}
+  

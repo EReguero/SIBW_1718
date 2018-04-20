@@ -26,26 +26,26 @@
             <aside id="aux"> 
                 <a target="_blank" href="https://es.wikipedia.org/wiki/Antonio_Saura"> 
                     <div id="biografia">
-                       <p>Biografia de <?php echo $datos[2]; ?></p>
+                       <p>Biografia de <?php echo $datos['autor']; ?></p>
                     </div>
                 </a>
                 <a target="_blank" href="http://www.antoniosaura.org/">
                     <div id="web">
-                       <p>Página web de <?php echo $datos[2]; ?></p>
+                       <p>Página web de <?php echo $datos['autor']; ?></p>
                     </div>
                 </a>   
             </aside>
             
             <article id="descripcion">
-			        <h2><?php echo $datos[1]; ?></h2>
-			        <h3><?php echo $datos[2]; ?></h3>
-			        <H4><?php echo $datos[3]; ?></H4>
+			        <h2><?php echo $datos['titulo']; ?></h2>
+			        <h3><?php echo $datos['autor']; ?></h3>
+			        <H4><?php echo $datos['fecha']; ?></H4>
 			        <div id="foto">
-			            <img src="<?php echo $datos[4]; ?>" alt="24 Cabezas">
-			            <p><?php echo $datos[1]; ?></p>
-			            <p id="fuente">Fuente: <?php echo $datos[5]; ?></p>
+                        <img src="<?php echo $datos['imagen'] ;?>" alt="<?php echo $datos['titulo'] ;?>">
+			            <p><?php echo $datos['titulo']; ?></p>
+			            <p id="fuente">Fuente: <?php echo $datos['fuente_imagen']; ?></p>
 			        </div>
-			        <p><?php echo $datos[6]; ?></p>
+			        <p><?php echo $datos['descripcion']; ?></p>
 			</article>
             <!-- Insertar Comentario -->
             <button id="boton_comentarios" onclick="mostrarComentarios()">Comentarios</button>
@@ -67,23 +67,22 @@
                     <input type="text" name="entrada_nombre" id="entrada_nombre" placeholder="Nombre completo">
                     <label for="email">Email:  </label>
                     <input type="text" name="email" id="email" placeholder="example@email.es">
-                    <textarea name="entrada_texto" id="entrada_texto"  onkeyup="validarTexto()" placeholder="Introduzca aquí su comentario." ></textarea>
+                    <textarea name="entrada_texto" id="entrada_texto"  onkeyup="validarTexto(<?php echo $palabrasprohibidas; ?>)" placeholder="Introduzca aquí su comentario." ></textarea>
                     <input type="submit" id="crear_comentario" value="Enviar">
                 </form>    
             </div>    
             <div id="botonessociales">
+               
                 <!-- Botón de pagina para imprimir -->
                 <a href="obra_imprimir.html">
                     <img src="../img/print_button.jpg" alt="Boton imprimir">
                 </a>
+
                 <!-- Botón de Twitter -->
-                <a href="http://www.twitter.com">
-                    <img src="../img/twitter_button.png" alt="Boton twitter">
-                </a>
+                <img src="img/twitter_button.png" alt="Boton twitter" onclick="window_open('<?php echo $datos['titulo'] ?>','<?php echo $datos['imagen']?>','Twitter');">
                 <!-- Botón de Facebook -->
-                <a href="http://www.facebook.com">
-                    <img src="../img/facebook_button.png" alt="Boton facebook">
-                </a>
+              
+                <img src="../img/facebook_button.png" alt="Boton facebook" onclick="window_open('<?php echo $datos['titulo'] ?>','<?php echo $datos['imagen']?>','Facebook');">
             </div>  
         </div>
         <?php
