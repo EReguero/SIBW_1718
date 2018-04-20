@@ -3,8 +3,8 @@ class db{
     
     function conexion(){
         $servername = "localhost";
-        $username = "root";
-        $password = "";
+        $username = "admin_p3";
+        $password = "practica3";
         $dbname = "practica3";
 
 

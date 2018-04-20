@@ -8,7 +8,10 @@
     <li><a href="/">Inicio</a></li>
     <li><a href="">Obras</a>
       <ul>
-        <!-- Menu desplegable con las obras -->
+        <li><a href="?obra=1">24 Cabezas</a></li>
+        <li><a href="?obra=2">Villa Borghese</a></li>
+        <li><a href="?obra=4">Caja Metafisica</a></li>
+        <li><a href="?obra=3">Antropometría azul</a></li>
       </ul>
     </li>
     <li><a href="">Artistas</a></li>

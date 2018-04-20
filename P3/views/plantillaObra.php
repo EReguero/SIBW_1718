@@ -33,7 +33,8 @@
                     <div id="web">
                        <p>Página web de <?php echo $datos['autor']; ?></p>
                     </div>
-                </a>   
+                </a>
+
             </aside>
             
             <article id="descripcion">
@@ -43,10 +44,16 @@
 			        <div id="foto">
                         <img src="<?php echo $datos['imagen'] ;?>" alt="<?php echo $datos['titulo'] ;?>">
 			            <p><?php echo $datos['titulo']; ?></p>
-			            <p id="fuente">Fuente: <?php echo $datos['fuente_imagen']; ?></p>
+			             <?php
+                                echo "<p id='fuente'>Fuente:".$datos['fuente_imagen']."</p>";
+                        ?>
 			        </div>
 			        <p><?php echo $datos['descripcion']; ?></p>
 			</article>
+            <div id="fechas">
+                <p id="fecha_creacion">Obra añadida el: <?php echo $datos['fecha_creacion']?></p>
+                <p id="fecha_modificacion">Obra modificada el: <?php echo $datos['fecha_modificacion']?></p>
+            </div>  
             <!-- Insertar Comentario -->
             <button id="boton_comentarios" onclick="mostrarComentarios()">Comentarios</button>
             <div id ="box_comentarios">
@@ -67,7 +74,13 @@
                     <input type="text" name="entrada_nombre" id="entrada_nombre" placeholder="Nombre completo">
                     <label for="email">Email:  </label>
                     <input type="text" name="email" id="email" placeholder="example@email.es">
-                    <textarea name="entrada_texto" id="entrada_texto"  onkeyup="validarTexto(<?php echo $palabrasprohibidas; ?>)" placeholder="Introduzca aquí su comentario." ></textarea>
+                    <textarea name="entrada_texto" id="entrada_texto"  onkeyup="validarTexto(<?php foreach ($palabrasprohibidas as $palabra) {
+                        if ($palabra === end($palabrasprohibidas)){
+                            echo "'".$palabra."'";
+                        }else{
+                            echo "'".$palabra."',";  
+                        }
+                    } ?>)" placeholder="Introduzca aquí su comentario." ></textarea>
                     <input type="submit" id="crear_comentario" value="Enviar">
                 </form>    
             </div>    

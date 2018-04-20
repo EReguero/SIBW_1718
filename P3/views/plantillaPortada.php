@@ -28,7 +28,7 @@
             <!-- Contendor con las obras de index-->
             <div id="obras">
                 <!-- 24 cabezas -->
-                 <?php
+                <?php
                     while($row = $datos->fetch_assoc()){
                         echo "<div class='contenedor_obra'>";    
                         echo "<a href='?obra=".$row['id']."''><img src=".$row['imagen']." alt=".$row['titulo']."></a>";

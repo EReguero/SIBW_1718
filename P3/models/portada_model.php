@@ -21,6 +21,17 @@ class portada_model{
     	return $result;
     }
 
+      public function get_colecciones(){
+
+		$sql = "SELECT * FROM colecciones";
+    	$result = $this->bd->query($sql);
+ 	
+
+
+    	return $result;
+    }
+
+
    
 }
 ?>

@@ -35,7 +35,7 @@ function mostrarComentarios(){
 
 
 
-function validarTexto(a) {
+function validarTexto(...a) {
 //Listado de palabras prohibidas
 	if (event.keyCode == 32){
 		var texto = document.getElementById("entrada_texto").value;
@@ -59,17 +59,14 @@ function validarTexto(a) {
 	}
 }
 
-
-//Variable que almacena el método window.open()
-var miVentana;
-
+  
 //La función window_open crea el pop-up o ventana emergente
 function window_open(titulo,imagen,red){
- miVentana = window.open("recursos/redes.php?titulo="+titulo+"&imagen="+imagen+"&red="+red, "Compartir en ", "width=750,height=500, top=85,left=120");
+  window.open("recursos/redes.php?titulo="+titulo+"&imagen="+imagen+"&red="+red, "Compartir en ", "width=750,height=500, top=85,left=120");
 }
   
 //La función window_close cerrara el pop-up o ventana emergente
 function window_close(){
-  miVentana.close();
+  window.close();
 }
   

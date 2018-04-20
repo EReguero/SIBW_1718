@@ -25,11 +25,23 @@ class obra_model{
     }
 
     public function get_palabrasprohibidas (){
-        $sql = "SELECT palabra FROM palabrasprohibidas";
+        $sql = "SELECT * FROM palabrasprohibidas";
         $result = $this->bd->query($sql);
-        $palabrasprohibidas = $result -> fetch_array();
+        $palabras = array();
+        while($row = $result->fetch_assoc()){
+            $palabras[]=$row['palabra'];
+        }
 
-        return $palabrasprohibidas;
+        return $palabras;
+    }
+
+    public function get_galeria (){
+        $sql="SELECT imagen1, imagen2, imagen3 from galeria where obra_id=".$this->obra_id;
+        $result = $this->bd->query($sql);
+        
+        $imagenes = $result->fetch_assoc();
+
+        return($imagenes);
     }
 }
 ?>

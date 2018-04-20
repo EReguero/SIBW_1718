@@ -4,6 +4,7 @@
 	$portada=new portada_model();
 	$datos = array();
 	$datos=$portada->get_datos();
+	$colecciones=$portada->get_colecciones();
 	//Llamada a la vista
 	require_once("views/plantillaPortada.php");
 ?>

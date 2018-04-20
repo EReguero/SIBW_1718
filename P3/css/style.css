@@ -86,7 +86,6 @@
     li:hover ul {    
         display:block;
         overflow-y: auto;
-        height: 300px;
     }
 
     /* Muestra el menu vertical */
@@ -284,6 +283,25 @@
     #main #descripcion h4{
         margin-top: -13px;
         margin-bottom: 25px;
+    }
+
+    #main #fecha_creacion{
+        font-size: 10px;
+        color: black;
+        float: right;
+        padding-right: 10px;
+    }
+
+    #main #fechas{
+        width: 20%;
+        float: right;
+    }
+    #main #fecha_modificacion{
+        font-size: 10px;
+        color: black;
+        float: right;
+        padding-right: 10px;
+        margin-top: 1px;
     }
     #main #descripcion #foto{
         padding-left: 15px;
