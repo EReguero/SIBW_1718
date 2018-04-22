@@ -1,7 +1,7 @@
 
 body{
     margin: 0;
-    width: auto;
+    width: 974px;
     margin: auto;
     font-family: Arial;
 }
@@ -10,22 +10,39 @@ body{
     /* Propiedades de la ventana compartir */
     #publicacion{
         color: black;
+        margin-right: 9px;
+        margin-top: 15px;
+        border: solid 3px lightgrey;
+        font-size: 21px;
+        font-family: "Calibri Light";
         text-align: center;
-        width: auto;
     }
-
-    #imageobracompartir img{
+    #contenedor {
+        color: black;
+        margin-right: 9px;
+        margin-top: 15px;
+        border: solid 3px lightgrey;
+        font-size: 21px;
+        font-family: "Calibri Light";
+        text-align: center;
+    }
+    #contenedor img{
         height: 300px;
         width: 300px;
+        margin-right: 9px;
+        margin-top: 15px;
+        margin-bottom: 40px;
+        border: solid 3px darkgrey;
+        margin-left: 50px;
     }
 
-    /*
-        font-size: 10px;
-        text-align: right;
-        margin-top: 0px;
-        margin-right: 15px;
 
+    #buttoncompartir{
+            color: black;
 
-        padding-left: 19px;
-        font-size: 12px;
-   */
+            margin-top: 25px;
+            border: solid 3px lightgrey;
+            font-size: 20px;
+            font-family: "Calibri Light";
+    }
+
