@@ -20,7 +20,13 @@
         <?php
             include 'recursos/header.php';
         ?>
-
+        <?php
+            require("models/obra_model.php");
+            $obra = new obra_model();
+            $datos = $obra->get_datos();
+            $comentarios = $obra->get_comentarios();
+            $palabrasprohibidas = $obra->get_palabrasprohibidas();
+        ?>
         <div id="main">
             <!-- Enlaces laterales auxiliares -->
             <aside id="aux"> 
@@ -36,24 +42,9 @@
                 </a>
 
             </aside>
-            
-            <article id="descripcion">
-			        <h2><?php echo $datos['titulo']; ?></h2>
-			        <h3><?php echo $datos['autor']; ?></h3>
-			        <H4><?php echo $datos['fecha']; ?></H4>
-			        <div id="foto">
-                        <img src="<?php echo $datos['imagen'] ;?>" alt="<?php echo $datos['titulo'] ;?>">
-			            <p><?php echo $datos['titulo']; ?></p>
-			             <?php
-                                echo "<p id='fuente'>Fuente:".$datos['fuente_imagen']."</p>";
-                        ?>
-			        </div>
-			        <p><?php echo $datos['descripcion']; ?></p>
-			</article>
-            <div id="fechas">
-                <p id="fecha_creacion">Obra añadida el: <?php echo $datos['fecha_creacion']?></p>
-                <p id="fecha_modificacion">Obra modificada el: <?php echo $datos['fecha_modificacion']?></p>
-            </div>  
+            <?php
+                include('views/obra.php');
+            ?>
             <!-- Insertar Comentario -->
             <button id="boton_comentarios" onclick="mostrarComentarios()">Comentarios</button>
             <div id ="box_comentarios">

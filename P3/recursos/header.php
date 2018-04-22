@@ -4,17 +4,36 @@
 </header>
 <!-- Menu Horizontal-->
 <nav id="menu">
+  <?php
+    require("models/menu_model.php");
+    $menu = new menu_model();
+    $obras = $menu->get_menu_obras();
+    $autores = $menu->get_menu_autores();
+    $colecciones = $menu->get_menu_colecciones();
+  ?>
   <ul>
     <li><a href="/">Inicio</a></li>
     <li><a href="">Obras</a>
       <ul>
-        <li><a href="?obra=1">24 Cabezas</a></li>
-        <li><a href="?obra=2">Villa Borghese</a></li>
-        <li><a href="?obra=4">Caja Metafisica</a></li>
-        <li><a href="?obra=3">Antropometría azul</a></li>
+        <?php while($row = $obras->fetch_assoc()){ ?>
+    <li><a href='/?obra=<?php echo $row['id'] ?>'><?php echo $row['titulo'] ?></a></li>
+       <?php } ?>  
       </ul>
     </li>
-    <li><a href="">Artistas</a></li>
+    <li><a href="">Artistas</a>
+       <ul>
+        <?php while($row = $autores->fetch_assoc()){ ?>
+    <li><a href=''><?php echo $row['autor'] ?></a></li>
+       <?php } ?>  
+      </ul>
+    </li>
     <li><a href="">Entradas</a></li>
+    <li><a href="">Colecciones</a>
+      <ul>
+        <?php while($row = $colecciones->fetch_assoc()){ ?>
+    <li><a href='/?coleccion=<?php echo $row['id'] ?>'><?php echo $row['nombre'] ?></a></li>
+       <?php } ?>  
+      </ul>
+    </li>
   </ul>
 </nav>

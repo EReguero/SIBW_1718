@@ -2,7 +2,7 @@
 <html>
     <head>
         <!-- Titulo de la pestaña-->
-        <title>Guggenheim Bilbao</title>
+        <title>Guggenheim Bilbao - Colecciones</title>
         <meta charset="utf-8">
         <!-- Palabras clave para el buscador-->   
         <meta name="keywords" content="Museo, Guggenheim, Bilbao, arte">
@@ -19,9 +19,9 @@
     </head>
     <body>
         <?php
-            require_once("models/portada_model.php");
-            $portada=new portada_model();
-            $datos=$portada->get_datos();
+            require_once("models/coleccion_model.php");
+            $coleccion=new coleccion_model();
+            $datos=$coleccion->get_coleccion();
         ?>
         <!-- Header con el logo e imagen de fondo -->
         <?php
@@ -34,15 +34,18 @@
             ?>
             <!-- Contendor con las obras de index-->
             <div id="obras">
-                <!-- 24 cabezas -->
+                <h3 id="colecciones"><?php echo $datos[1] ?> </h3>
                 <?php
-                    while($row = $datos->fetch_assoc()){
-                        echo "<div class='contenedor_obra'>";    
-                        echo "<a href='?obra=".$row['id']."''><img src=".$row['imagen']." alt=".$row['titulo']."></a>";
-                        echo "<p>".$row['titulo']."</p>";
-                        echo "</div>";  
+                    $n = 2;
+                    while($datos[$n] != ''){
+                            $obra = $coleccion-> get_obra($datos[$n]);
+                            echo "<div class='contenedor_obra'>";    
+                            echo "<a href='?obra=".$datos[$n]."''><img src=".$obra['imagen']." alt=".$obra['titulo']."></a>";
+                            echo "<p>".$obra['titulo']."</p>";
+                            echo "</div>";
+                            $n++;  
                     }
-                ?>  
+                ?>           
             </div>   
         </div>
         <?php

@@ -2,7 +2,7 @@
 <html>
     <head>
         <!-- Titulo de la pestaña-->
-        <title>Guggenheim Bilbao</title>
+        <title>Guggenheim Bilbao - Colecciones</title>
         <meta charset="utf-8">
         <!-- Palabras clave para el buscador-->   
         <meta name="keywords" content="Museo, Guggenheim, Bilbao, arte">
@@ -19,9 +19,8 @@
     </head>
     <body>
         <?php
-            require_once("models/portada_model.php");
-            $portada=new portada_model();
-            $datos=$portada->get_datos();
+           
+           
         ?>
         <!-- Header con el logo e imagen de fondo -->
         <?php
@@ -34,10 +33,11 @@
             ?>
             <!-- Contendor con las obras de index-->
             <div id="obras">
+                <h3 id="colecciones"> Colecciones </h3>
                 <!-- 24 cabezas -->
                 <?php
                     while($row = $datos->fetch_assoc()){
-                        echo "<div class='contenedor_obra'>";    
+                        echo "<div class='contenedor_coleccion'>";    
                         echo "<a href='?obra=".$row['id']."''><img src=".$row['imagen']." alt=".$row['titulo']."></a>";
                         echo "<p>".$row['titulo']."</p>";
                         echo "</div>";  

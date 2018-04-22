@@ -5,10 +5,11 @@ class obra_model{
  
     public function __construct(){
         $this->bd=db::conexion();
-        $this->obras=array();
-        $this->obra_id=$_GET["obra"];
+        $this->obra_id=$_GET["obra"]; 
     }
 
+
+    
     public function get_datos(){
         $sql = "SELECT * FROM obras WHERE ID= ".$this->obra_id;
         $result = $this->bd->query($sql);
@@ -43,5 +44,7 @@ class obra_model{
 
         return($imagenes);
     }
+
+   
 }
 ?>

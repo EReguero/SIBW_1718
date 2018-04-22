@@ -1,8 +1,16 @@
 <?php
   require("db_helper.php");
   if(count($_GET) == 0) {
-    include ("controladores/portada_controlador.php");
+    include ("views/plantillaPortada.php");
   } else {
-    include("controladores/obra.php");
+    switch(key($_GET)) {
+    case 'obra':
+        include("views/plantillaObra.php");
+        break;
+    
+    case 'coleccion':
+      include("views/plantillaColeccion.php");
+      break;
+    }
   }
 ;?>

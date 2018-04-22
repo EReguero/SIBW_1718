@@ -58,7 +58,7 @@
 
     li {
         float: left;
-        width: 25%;
+        width: 20%;
     }
 
     li a {
@@ -79,13 +79,17 @@
     li ul {
         display:none;
         position:absolute;
-        width:243px;
+        max-width:243px;
+        width: auto;
+        min-width: 194px;
+        max-height: 400PX;
+        height: auto;
+        overflow-y: auto;
     }
 
     /* Muestra el menu oculto al pasar el ratón por encima */            
     li:hover ul {    
         display:block;
-        overflow-y: auto;
     }
 
     /* Muestra el menu vertical */
@@ -191,6 +195,32 @@
     }
 
     #main #obras .contenedor_obra p{
+        font-size: 11px;
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    /*Propiedades de los contenedores de colecciones */
+    #colecciones {
+        text-align: center;
+    }
+
+     #main #obras .contenedor_colecciones{
+        width: 32%;
+        height: 280px;
+        float: left;
+        padding-bottom: 5px;
+    }
+
+    #main #obras .contenedor_colecciones img{
+        height: 230px;
+        width: 210px;
+        margin-right: 9px;
+        margin-top: 15px;
+        border: solid 3px #C5C5B5;
+    }
+
+    #main #obras .contenedor_colecciones p{
         font-size: 11px;
         margin-top: 5px;
         text-align: center;
